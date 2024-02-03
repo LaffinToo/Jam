@@ -111,7 +111,7 @@ path_parse(
 	p = 0;
 	q = file;
 
-	while( q = (char *)memchr( q, '.', end - q ) )
+	while( (q = (char *)memchr( q, '.', end - q ) ))
 	    p = q++;
 
 	if( p )

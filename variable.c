@@ -81,9 +81,9 @@ var_defines( const char **e )
 	    /* On the mac (MPW), the var=val is actually var\0val */
 	    /* Think different. */
 	
-	    if( ( val = strchr( *e, '=' ) ) || ( val = *e + strlen( *e ) ) )
+	    if( ( (val = strchr( *e, '=' ) )) || (( val = *e + strlen( *e ) ) ))
 # else
-	    if( val = strchr( *e, '=' ) )
+	    if( (val = strchr( *e, '=' ) ))
 # endif
 	    {
 		LIST *l = L0;
@@ -107,7 +107,7 @@ var_defines( const char **e )
 
 		/* Do the split */
 
-		for( pp = val + 1; p = strchr( pp, split ); pp = p + 1 )
+		for( pp = val + 1; (p = strchr( pp, split )); pp = p + 1 )
 		{
 		    strncpy( buf, pp, p - pp );
 		    buf[ p - pp ] = '\0';
@@ -194,7 +194,7 @@ var_string(
 
 		    /* Separate with space */
 
-		    if( l = list_next( l ) )
+		    if( (l = list_next( l )) )
 			*out++ = ' ';
 		}
 

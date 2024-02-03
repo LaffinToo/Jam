@@ -55,6 +55,11 @@
 # include <unistd.h>
 # endif
 
+# ifdef OS_LINUX
+# include <unistd.h>
+# include <sys/wait.h>
+# endif
+
 # ifdef OS_NT 
 # define USE_EXECNT
 # include <process.h>

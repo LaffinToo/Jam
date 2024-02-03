@@ -524,6 +524,7 @@ else if $(UNIX)
 
 	# UNIX defaults
 
+	AR			?= ar r ;
 	CCFLAGS		?= ;
 	C++FLAGS	?= $(CCFLAGS) ;
 	CHMOD		?= chmod ;

@@ -48,6 +48,7 @@
 # endif
 
 # if defined( OS_RHAPSODY ) || \
+	 defined( OS_LINUX ) || \
      defined( OS_DARWIN ) || \
      defined( OS_MACOSX ) || \
      defined( OS_NEXT )
@@ -140,7 +141,7 @@ file_dirscan(
 	if( DEBUG_BINDSCAN )
 	    printf( "scan directory %s\n", dir );
 
-	while( dirent = readdir( d ) )
+	while( (dirent = readdir( d ) ))
 	{
 # ifdef old_sinix
 	    /* Broken structure definition on sinix. */

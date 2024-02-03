@@ -317,6 +317,7 @@
 # ifdef linux
 # define OSMINOR "OS=LINUX"
 # define OS_LINUX
+# define NO_VFORK
 # endif
 # ifdef __Lynx__
 # define OSMINOR "OS=LYNX"

@@ -106,7 +106,11 @@ static const char *target_bind[] =
 	"exists",
 } ;
 
-# define spaces(x) ( "                " + 16 - ( x > 16 ? 16 : x ) )
+static inline const char* spaces(int x) {
+    static const char spaces[] = "                ";
+    int numSpaces = 16 - (x > 16 ? 16 : x);
+    return &spaces[16 - numSpaces];
+}
 
 /*
  * make() - make a target, given its name
